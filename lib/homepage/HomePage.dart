@@ -14,9 +14,9 @@ class MyHomePage extends StatelessWidget {
         child: BlocConsumer<InternetBloc,InternetState>(
           listener: (context, state){
             if(state is InternetGainedState){
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Internet Connected"), backgroundColor: Colors.green,));
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Internet is Connected"), backgroundColor: Colors.green,));
             }else if(state is InternetLostState){
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Internet Disconnected"), backgroundColor: Colors.green,));
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Internet is Disconnected"), backgroundColor: Colors.green,));
             }
           },
           builder: (context, state){
